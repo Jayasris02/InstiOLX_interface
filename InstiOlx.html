@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstiOLX Selling Interface</title>
+    <link rel="stylesheet" href="InstiOlx.css">
+</head>
+<body>
+    <h1></h1><b><top><font size="25" face="Times New Roman" color="purple">InstiOLX</font></top></b></h1><hr style="height:30px">
+    <div class="container">
+        <h1>Sell Your Item</h1>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="buying-date">Buying Date</label>
+                <input type="date" id="buying-date" name="buying_date" required>
+            </div>
+            <div class="form-group">
+                <label for="buying-price">Buying Price</label>
+                <input type="number" id="buying-price" name="buying_price" required>
+            </div>
+            <div class="form-group">
+                <label for="photos">Upload Multiple Photos</label>
+                <input type="file" id="photos" name="photos[]" accept="image/*" multiple required>
+            </div>
+            <div class="form-group">
+                <label for="your-details">Your Details</label>
+                <textarea id="your-details" name="your_details" rows="2" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <button type="submit" class="post-button">Post</button>
+        </form>
+    </div>
+</body>
+</html>
